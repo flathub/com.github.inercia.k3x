@@ -1,10 +1,10 @@
 {
   "app-id": "com.github.inercia.k3x",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "3.36",
+  "runtime-version": "41",
   "sdk": "org.gnome.Sdk",
   "base": "io.elementary.BaseApp",
-  "base-version": "juno-19.08",
+  "base-version": "juno-21.08",
   "command": "k3x",
   "finish-args": [
     "--device=dri",
@@ -71,6 +71,9 @@
     {
       "name": "k3x",
       "buildsystem": "meson",
+      "post-install": [
+        "sed 10d --in-place ${FLATPAK_DEST}/share/appdata/com.github.inercia.k3x.appdata.xml"
+      ],
       "sources": [
         {
           "type": "git",
