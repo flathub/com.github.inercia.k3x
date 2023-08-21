@@ -47,8 +47,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://storage.googleapis.com/kubernetes-release/release/v1.18.0/bin/linux/amd64/kubectl",
-          "sha256": "bb16739fcad964c197752200ff89d89aad7b118cb1de5725dc53fe924c40e3f7"
+          "url": "https://storage.googleapis.com/kubernetes-release/release/v1.28.0/bin/linux/amd64/kubectl",
+          "sha256": "4717660fd1466ec72d59000bb1d9f5cdc91fac31d491043ca62b34398e0799ce"
         }
       ]
     },
@@ -63,8 +63,8 @@
       "sources": [
         {
           "type": "file",
-          "url": "https://github.com/rancher/k3d/releases/download/v1.7.0/k3d-linux-amd64",
-          "sha256": "da9ff31bcf4377fadfb065f4998d347f19de1168a5a553ce2c23b763ee1f6098"
+          "url": "https://github.com/k3d-io/k3d/releases/download/v5.5.2/k3d-linux-amd64",
+          "sha256": "bd0fac44fd5c6e6962b14d259a2e13229effb6625e4d433aaad6ff76ed2f07b9"
         }
       ]
     },
@@ -78,7 +78,8 @@
         {
           "type": "git",
           "url": "https://github.com/inercia/k3x.git",
-          "tag": "v0.2.10"
+          "tag": "v0.2.10",
+          "commit": "89e9c0159039642ad0cb9cef5e165fa448aa3ca3"
         }
       ]
     }
