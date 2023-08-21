@@ -1,10 +1,10 @@
 {
   "app-id": "com.github.inercia.k3x",
   "runtime": "org.gnome.Platform",
-  "runtime-version": "41",
+  "runtime-version": "44",
   "sdk": "org.gnome.Sdk",
   "base": "io.elementary.BaseApp",
-  "base-version": "juno-21.08",
+  "base-version": "juno-22.08",
   "command": "k3x",
   "finish-args": [
     "--device=dri",
