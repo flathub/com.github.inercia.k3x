@@ -71,15 +71,22 @@
     {
       "name": "k3x",
       "buildsystem": "meson",
-      "post-install": [
-        "sed 10d --in-place ${FLATPAK_DEST}/share/appdata/com.github.inercia.k3x.appdata.xml"
-      ],
       "sources": [
         {
           "type": "git",
           "url": "https://github.com/inercia/k3x.git",
           "tag": "v0.2.10"
+        },
+        {
+          "type": "patch",
+          "path": "fix-appdata.patch"
         }
+      ],
+      "post-install": [
+          "sed 10d --in-place ${FLATPAK_DEST}/share/appdata/com.github.inercia.k3x.appdata.xml",
+          "mkdir -p /app/share/icons/hicolor/scalable/apps",
+          "mv /app/share/icons/hicolor/128x128/apps/${FLATPAK_ID}.svg /app/share/icons/hicolor/scalable/apps/${FLATPAK_ID}.svg",
+          "find /app/share/icons/hicolor -type f -not -path \"*scalable*\" -not -path \"*actions*\" -name \"*.svg\" -delete"
       ]
     }
   ]

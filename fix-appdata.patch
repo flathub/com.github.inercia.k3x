@@ -1,0 +1,59 @@
+From 2445b6c48dae56a0d336a4b0a933e8d8c9edd660 Mon Sep 17 00:00:00 2001
+From: Sabri Ünal <yakushabb@gmail.com>
+Date: Sun, 28 Dec 2025 15:37:04 +0300
+Subject: [PATCH] Fix appdata paper cuts
+
+---
+ data/com.github.inercia.k3x.appdata.xml.in | 23 ++++++++---------------
+ 1 file changed, 8 insertions(+), 15 deletions(-)
+
+diff --git a/data/com.github.inercia.k3x.appdata.xml.in b/data/com.github.inercia.k3x.appdata.xml.in
+index aa2088d..62a5393 100644
+--- a/data/com.github.inercia.k3x.appdata.xml.in
++++ b/data/com.github.inercia.k3x.appdata.xml.in
+@@ -1,18 +1,19 @@
+ <?xml version="1.0" encoding="UTF-8"?>
+-<component type="desktop">
+-  <id>com.github.inercia.k3x.desktop</id>
++<component type="desktop-application">
++  <id>com.github.inercia.k3x</id>
+   <metadata_license>CC0-1.0</metadata_license>
+   <project_license>MIT</project_license>
+   <name>k3x</name>
+   <summary>Manager for local Kubernetes clusters with k3d</summary>
+   <developer_name>Alvaro Saurin</developer_name>
+-  <categories>
+-    <category>Game</category>
+-    <category>GTK</category>
+-  </categories>
+   <provides>
+     <binary>com.github.inercia.k3x</binary>
++    <id>com.github.inercia.k3x.desktop</id>
+   </provides>
++  <replaces>
++    <id>com.github.inercia.k3x.desktop</id>
++  </replaces>
++  <launchable type="desktop-id">com.github.inercia.k3x.desktop</launchable>
+   <screenshots>
+     <screenshot type="default">
+       <image>https://raw.githubusercontent.com/inercia/k3x/master/docs/screenshots/create-new-dialog-general.png</image>
+@@ -46,15 +47,7 @@
+       </description>
+     </release>
+   </releases>
+-  <content_rating type="oars-1.1">
+-    <content_attribute id="social-chat">none</content_attribute>
+-    <content_attribute id="social-info">none</content_attribute>
+-    <content_attribute id="social-audio">none</content_attribute>
+-    <content_attribute id="social-location">none</content_attribute>
+-    <content_attribute id="social-contacts">none</content_attribute>
+-    <content_attribute id="money-purchasing">none</content_attribute>
+-    <content_attribute id="money-gambling">none</content_attribute>
+-  </content_rating>
++  <content_rating type="oars-1.1"/>
+   <url type="homepage">https://github.com/inercia/k3x</url>
+   <url type="bugtracker">https://github.com/inercia/k3x/issues</url>
+   <url type="help">https://github.com/inercia/k3x/issues</url>
+--
+libgit2 1.7.2
+
